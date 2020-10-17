@@ -8,6 +8,7 @@ import {Project} from '../models/project';
   styleUrls: ['./work.component.css']
 })
 export class WorkComponent implements OnInit {
+  selectedProject: Project;
   projects: Project[];
 
   constructor(public projectService: ProjectService) { }
@@ -16,6 +17,14 @@ export class WorkComponent implements OnInit {
     this.projectService.getProjects().then(res => {
       this.projects = res;
     });
+  }
+
+  setSelected(proj : Project) {
+    this.selectedProject = proj;
+  }
+
+  back() {
+    this.selectedProject = null;
   }
 
 }

@@ -1,6 +1,6 @@
 <div class="col" *ngIf="project">
-  <h3>{{project.name}}</h3>
-  <p>{{project.description}}</p>
 
+  <img class="img-fluid img-thumbnail" src="assets/images/{{project.img}}"/>
+  <h3 (click)="selected()">{{project.name}}</h3>
 
 </div>

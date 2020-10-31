@@ -2,28 +2,32 @@
 
 
   <div class="row mt-2 mb-5">
-    <div class="col">
-      <h2>Projects</h2>
+    <button *ngIf="selectedProject" (click)="back()" class="btn btn-secondary">Back</button>
+    <div class="col text-center">
+      <h1>Projects</h1>
     </div>
   </div>
 
   <div *ngIf="!selectedProject">
     <div class="row">
       <div *ngFor="let project of projects" class="col-md-4">
-        <app-project [project]="project" (isSelected)="setSelected($event)"></app-project>
+        <app-project  [project]="project" (isSelected)="setSelected($event)"></app-project>
       </div>
     </div>
   </div>
 
 
 
-  <div *ngIf="selectedProject">
-    <button (click)="back()" class="btn btn-secondary">Back</button>
-    <h1>{{selectedProject.name}}</h1>
-    <img class="img-fluid img-thumbnail" src="assets/images/{{selectedProject.img}}"/>
-    <p>{{selectedProject.description}}</p>
-
-
+  <div @fade *ngIf="selectedProject">
+    <div class="row">
+      <div class="col">
+        <h1>{{selectedProject.name}}</h1>
+        <img class="img-fluid img-thumbnail" src="assets/images/{{selectedProject.img}}"/>
+      </div>
+      <div class="col">
+        <p>{{selectedProject.description}}</p>
+      </div>
+    </div>
   </div>
 
 </div>

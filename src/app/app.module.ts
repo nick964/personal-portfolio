@@ -9,21 +9,30 @@ import {AngularFireDatabaseModule} from "@angular/fire/database";
 import { WorkComponent } from './work/work.component';
 import { HomeComponent } from './home/home.component';
 import { ProjectComponent } from './project/project.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { ResumeComponent } from './resume/resume.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
 
 @NgModule({
   declarations: [
     AppComponent,
     WorkComponent,
     HomeComponent,
-    ProjectComponent
+    ProjectComponent,
+    ResumeComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    PdfViewerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+platformBrowserDynamic().bootstrapModule(AppModule);

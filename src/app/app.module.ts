@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {AngularFireModule} from "@angular/fire";
@@ -12,7 +11,6 @@ import { ProjectComponent } from './project/project.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { ResumeComponent } from './resume/resume.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
-import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
 
 @NgModule({
   declarations: [
@@ -35,4 +33,3 @@ import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
 })
 export class AppModule { }
 
-platformBrowserDynamic().bootstrapModule(AppModule);

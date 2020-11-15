@@ -1,8 +1,8 @@
 <div class="container">
 
-
+  <button *ngIf="selectedProject" (click)="back()" class="btn btn-sm btn-secondary">Back</button>
   <div class="row mt-2 mb-5">
-    <button *ngIf="selectedProject" (click)="back()" class="btn btn-secondary">Back</button>
+
     <div class="col text-center">
       <h1>Projects</h1>
     </div>
@@ -20,8 +20,15 @@
 
   <div @fade *ngIf="selectedProject">
     <div class="row">
-      <div class="col">
+      <div class="col" align="center">
         <h1>{{selectedProject.name}}</h1>
+      </div>
+      <div class="col">
+        <span></span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col" align="center">
         <img class="img-fluid img-thumbnail" src="assets/images/{{selectedProject.img}}"/>
       </div>
       <div class="col">

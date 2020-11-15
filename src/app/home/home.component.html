@@ -1,16 +1,18 @@
 <div class="container">
   <div class="row">
-    <div class="col">
+    <div class="col-lg-6 col-sm-12">
+      <div class="mt-5">
       <h2>Hello, I'm Nick Robinson</h2>
       <p>My name is Nick Robinson, and I’m a full stack web developer currently working at TIAA. Check out my site to see other stuff I’ve done, or feel free to reach out at nick@imnickrobinson.com</p>
         <p>Thanks! Enjoy the best picture I ever took of my cat!</p>
+      </div>
     </div>
-    <div class="col">
+    <div class="col-lg-6 col-sm-12">
       <img src="{{imgUrl}}" alt="pic of my cat or dog depending on preference" class="img-fluid img-thumbnail"/>
       <div class="text-center">
-        <button (click)="getNewDogPic()" class="btn btn-secondary ml-3">More Dog</button>
-        <button (click)="getNewCatPic()" class="btn btn-secondary ml-3">More Cat</button>
-        <button (click)="getNewOtherPic()" class="btn btn-secondary ml-3">More Other</button>
+        <button (click)="getNewDogPic()" class="btn btn-dark ml-3">More Dog</button>
+        <button (click)="getNewCatPic()" class="btn btn-dark ml-3">More Cat</button>
+        <button (click)="getNewOtherPic()" class="btn btn-dark ml-3">More Other</button>
       </div>
 
     </div>
